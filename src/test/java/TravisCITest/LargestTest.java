@@ -22,4 +22,15 @@ public class LargestTest {
 		assertEquals(20, Largest.largest(new int[] {8,20,7}));
 	}
 
+	@Test
+	public void testEmpty() {
+		try {
+			Largest.largest(new int[] {});
+			fail("exception");
+		} catch (RuntimeException e) {
+			assertTrue(true);
+		}
+	}
 }
+
+
